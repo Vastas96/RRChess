@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+white:
+  nick_name: white
+  rating: 1250
+  state: 0
+
+black:
+  nick_name: black
+  rating: 1250
+  state: 0

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>White:</strong>
+  <%= @room.white.nick_name %> <td><%= link_to 'Show', @room.white %></td>
+</p>
+
+<p>
+  <strong>Black:</strong>
+  <%= @room.black.nick_name %> <td><%= link_to 'Show', @room.black %></td>
+</p>
+
+<p>
+  <strong>Side:</strong>
+  <%= @room.side == 0 ? 'White' : 'Black' %>
+</p>
+<p>
+  <strong>Game:</strong>
+</p>
+<br/>
+<%if @board != nil%>
+  <head>
+    <title>Chess</title>
+    <link rel="stylesheet" href="../assets/chessboard-0.3.0.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../assets/chessboard-0.3.0.js"></script>
+  </head>
+  <body>
+    <div id="board1" style="width: 400px"></div>
+    <script>
+        var board1 = ChessBoard('board1', '<%="#{@board.get_fen}"%>');
+    </script>
+  </body>
+<%end%>
+
+<br/>
+
+
+<%= link_to 'Back', rooms_path %>

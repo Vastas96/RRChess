@@ -1,0 +1,17 @@
+<h1>Chess Server control panel</h1>
+
+
+<tbody>
+  <tr>
+    <td><b>Users online:</b> <%= @server.clients.size %> </td>
+    <td><b>Games in progress:</b> <%= @server.rooms.size / 2 %></td>
+    <td><b>Server status:</b> <%= @server.state %></td>
+  </tr>
+</tbody>
+
+<br/>
+<%=button_to 'Start the server',  {:action => 'start'},:method => :get%>
+<br/>
+<%=button_to 'Restart the server', {:action => 'restart'},:method => :get ,data: {confirm:'Are you sure?'} %>
+<br/>
+<%=button_to 'View games', {:action => 'index',  :controller => 'rooms'},:method => :get %>

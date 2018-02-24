@@ -1,0 +1,7 @@
+{
+  "name": "RRChess",
+  "private": true,
+  "dependencies": {
+    "chess.js": "~0.10.2"
+  }
+}
